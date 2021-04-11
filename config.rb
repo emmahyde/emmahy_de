@@ -69,7 +69,7 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript, ignore: "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none})
+  activate :minify_javascript, ignore: "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none}, harmony: true)
 
   # Use Gzip
   activate :gzip
