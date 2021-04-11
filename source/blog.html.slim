@@ -2,5 +2,5 @@ section.homepage-blog.blog
   .container
     .post_items
       //get the first two most recent content
-      - blog.articles.first(2).each do | article |
+      - blog.articles.first(10).each do | article |
         = partial 'partials/blog/post_item', locals: {article: article}

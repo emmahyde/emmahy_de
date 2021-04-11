@@ -8,4 +8,4 @@ services:
       - 35729:35729
     volumes:
       - .:/app
-    command: middleman server
+    command: bundle exec middleman server
