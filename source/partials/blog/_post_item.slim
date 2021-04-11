@@ -1,4 +1,4 @@
-article.news-item
+article.post_item
   .row
     .image
       - if article.data.image
@@ -9,12 +9,11 @@ article.news-item
             //make sure the article date is actually a date
             - date = Date.parse article.data.date.to_s
             span = date.strftime("%d-%m-%Y")
-
     .content
       .wrapper
         = link_to article
           h3 = article.data.title
-        
+
         p = article.data.description
 
-        = link_to 'Read the story', article, class: 'cta'
+        = link_to 'Continue Reading', article, class: 'cta'

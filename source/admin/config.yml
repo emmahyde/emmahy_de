@@ -3,31 +3,13 @@ backend:
 
 media_folder: source/images/uploads
 public_folder: /images/uploads
-
-#publish_mode: editorial_workflow #optional, enables publishing workflow
+publish_mode: editorial_workflow #optional, enables publishing workflow
 
 collections:
-  #yaml middleman data example
-  - name: product
-    label: Product
-    format: yml
-    extension: yml
-    folder: data/products/
-    create: true
-    slug: '{{title}}'
-    fields:
-      - {label: Title, name: title, widget: string, required: true}
-      - {label: Publish Date, name: date, widget: datetime}
-      - {label: Image, name: image, widget: image, required: true}
-
-      - {label: Weight, name: weight, widget: number}
-      - {label: Price, name: price, widget: number}
-      - {label: Body, name: body, widget: markdown}
-
-#markdown middleman blog example
+  #markdown middleman blog example
   - name: blog
     label: Blog
-    folder: source/posts/
+    folder: source/content/
     extension: .html.md
     format: frontmatter
     create: true
@@ -42,7 +24,7 @@ collections:
   - name: pages
     label: Pages
     files:
-      - file: "data/pages/home.yml"
+      - file: data/pages/home.yml
         label: Homepage
         name: home
         fields:
@@ -55,6 +37,17 @@ collections:
           - label: Story
             name: story
             widget: markdown
+  #      - file: "data/pages/about.yml"
+  #        label: About Me
+  #        name: about
+  #        widget: markdown
+  #        fields:
+  #          - label: Hero
+  #            name: hero
+  #            widget: object
+  #            fields:
+  #              - { label: Title, name: title, widget: string }
+  #              - { label: Image, name: image, widget: image }
 
   - name: settings
     label: Settings
@@ -69,18 +62,3 @@ collections:
             fields:
               - {label: Label, name: label, widget: string}
               - {label: Path, name: path, widget: string}
-      - file: data/settings/units.yml
-        label: Units
-        name: units
-        fields:
-          - label: Currency
-            name: currency
-            widget: select
-            options: ['€', '$', '£']
-            default: '€'
-
-          - label: Weight
-            name: weight
-            widget: select
-            options: ['kg', ' st', ' lb']
-            default: 'kg'
