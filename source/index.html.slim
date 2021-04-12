@@ -15,7 +15,7 @@ section.hero style=background_image(image_path(data.pages.home.hero.image))
 
 section.homepage-blog.blog
   .container
-    .post_items
+    .post-items
       //get the first two most recent content
       - blog.articles.first(5).each do | article |
         = partial 'partials/blog/post_item', locals: {article: article}
@@ -23,9 +23,9 @@ section.homepage-blog.blog
 // BLOG.HTML.SLIM used to be:
   / section.homepage-blog.blog
   /   .container
-  /     .post_items
+  /     .post-items
   /       //get the first two most recent content
   /       - blog.articles.first(10).each do | article |
-  /         = partial 'partials/blog/post_item', locals: {article: article}
+  /         = partial 'partials/blog/post-item', locals: {article: article}
 
 / but i do not think its necessary to have a separate blog page. Although it probably will be one dya. Hmm
