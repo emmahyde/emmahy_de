@@ -27,7 +27,7 @@ const HomePreview = ({ entry, widgetFor }) => {
     <div>
       <section className="hero" style={{ backgroundImage: `url('${data.hero.image}')` }}>
       </section>
-      <section className="homepage-blog">
+      <section className="homepage-blog blog">
         <div className="container">
           <div className="row">
             <div className="blog">{widgetFor('post')}</div>

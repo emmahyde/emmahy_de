@@ -8,3 +8,6 @@ services:
       - 35729:35729
     volumes:
       - .:/app
+    environment:
+      NODE_ENV: development
+    command: bundle exec middleman server

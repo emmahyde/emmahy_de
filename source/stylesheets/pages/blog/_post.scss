@@ -1,6 +1,4 @@
 .blog {
-  padding-bottom: 60px;
-
   h2 {
     margin: 0 0 30px;
   }
@@ -9,17 +7,19 @@
     @extend %row;
   }
 
+//document.querySelector("body > main > section.homepage-blog.blog > div > div > blog:nth-child(2)")
   .post-item {
     @extend %column;
     @extend %col-xs-10;
     margin-bottom: 20px;
+    width: 100%;
   }
 
   .image {
     position: relative;
     @extend %column;
     @extend %col-sm-7;
-    @extend %col-md-7;
+    @extend %col-md-6;
 
     img{
       @extend %img-responsive;
@@ -37,11 +37,10 @@
     }
   }
 
-  .content{
+  .content {
     @extend %column;
     @extend %col-sm-5;
-    @extend %col-md-5;
-    margin-bottom: 20px;
+    @extend %col-md-6;
   }
 
   .wrapper {
@@ -81,9 +80,6 @@
     }
   }
   @media screen and (max-width: $screen-sm-max) {
-    .post-item {
-      margin-bottom: 30px;
-    }
     .wrapper {
       padding: 0px;
     }
@@ -97,7 +93,7 @@
     padding-bottom: 15px;
 
     .post-item {
-      margin-bottom: 15px;
+      margin-bottom: 50px;
     }
 
     h2 {
