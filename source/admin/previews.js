@@ -30,7 +30,7 @@ const HomePreview = ({ entry, widgetFor }) => {
       <section className="homepage-blog">
         <div className="container">
           <div className="row">
-            <div className="story-content">{widgetFor('story')}</div>
+            <div className="blog">{widgetFor('post')}</div>
           </div>
         </div>
       </section>
