@@ -34,10 +34,10 @@ collections:
             fields:
               - {label: Title, name: title, widget: string}
               - {label: Image, name: image, widget: image}
-          - label: Story
-            name: story
-            widget: markdown
-  #      - file: "data/pages/about.yml"
+#          - label: Story
+#            name: story
+#            widget: markdown
+#  #      - file: "data/pages/about.yml"
   #        label: About Me
   #        name: about
   #        widget: markdown
