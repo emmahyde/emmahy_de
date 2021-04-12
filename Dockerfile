@@ -2,6 +2,8 @@ FROM ruby:2.7.1
 
 ENV LANG C.UTF-8
 
+RUN mkdir /var/log/prod
+
 RUN apt update \
   && apt upgrade -y \
   && apt install -y nodejs
