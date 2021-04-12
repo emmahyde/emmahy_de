@@ -14,5 +14,4 @@ RUN bundle install
 
 COPY . /app/
 
-RUN bundle exec middleman build --verbose
-RUN bundle exec middleman server
+RUN bundle exec middleman build
