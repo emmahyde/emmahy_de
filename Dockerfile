@@ -12,4 +12,7 @@ WORKDIR /app
 COPY Gemfile Gemfile.lock /app/
 RUN bundle install
 
-CMD ["middleman", "server"]
+COPY . /app/
+
+RUN bundle exec middleman build --verbose
+RUN bundle exec middleman server

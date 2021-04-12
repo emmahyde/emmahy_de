@@ -11,15 +11,15 @@
 
   .post-item {
     @extend %column;
-    @extend %col-xs-8;
+    @extend %col-xs-10;
     margin-bottom: 60px;
   }
 
   .image {
     position: relative;
     @extend %column;
-    @extend %col-sm-5;
-    @extend %col-md-6;
+    @extend %col-sm-7;
+    @extend %col-md-7;
 
     img{
       @extend %img-responsive;
@@ -39,8 +39,8 @@
 
   .content{
     @extend %column;
-    @extend %col-sm-7;
-    @extend %col-md-6;
+    @extend %col-sm-5;
+    @extend %col-md-5;
   }
 
   .wrapper {
@@ -76,7 +76,7 @@
 
   @media screen and (max-width: $screen-md-max) {
     .wrapper {
-      padding: 15px;
+      padding: 5px;
     }
   }
   @media screen and (max-width: $screen-sm-max) {
