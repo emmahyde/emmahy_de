@@ -7,12 +7,17 @@
     @extend %row;
   }
 
-//document.querySelector("body > main > section.homepage-blog.blog > div > div > blog:nth-child(2)")
   .post-item {
     @extend %column;
     @extend %col-xs-10;
     margin-bottom: 20px;
     width: 100%;
+    a {
+      color: $text-color;
+      &:hover, &:focus {
+        color: $primary-color;
+      }
+    }
   }
 
   .image {
