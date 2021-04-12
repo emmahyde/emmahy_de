@@ -12,7 +12,7 @@
   .post-item {
     @extend %column;
     @extend %col-xs-10;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .image {
@@ -41,6 +41,7 @@
     @extend %column;
     @extend %col-sm-5;
     @extend %col-md-5;
+    margin-bottom: 20px;
   }
 
   .wrapper {
