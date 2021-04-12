@@ -8,3 +8,4 @@ services:
       - 35729:35729
     environment:
       NODE_ENV: production
+    command: bundle exec middleman server
