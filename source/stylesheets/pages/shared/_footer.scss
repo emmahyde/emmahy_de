@@ -41,8 +41,6 @@ footer {
       width: 60px; 
       height: 60px;
       padding: 15px;
-      background-color: #fff;
-      border-radius: 50%;
       &.active, &:hover, &:focus{
         color: $primary-color;
       }
