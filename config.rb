@@ -41,7 +41,7 @@ end
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# pretty urls
+# pretty urlsr,
 activate :directory_indexes
 
 helpers do
@@ -69,12 +69,19 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript, ignore: "**/admin/**", compressor: ::Uglifier.new(mangle: true, compress: { drop_console: true }, output: {comments: :none}, harmony: true)
+  activate :minify_javascript, ignore: "**/admin/**", compressor: ::Uglifier.new(
+    harmony: true,
+    compress: {
+      drop_console: true
+    },
+    output: {
+      comments: :none
+    })
 
   # Use Gzip
   activate :gzip
 
   #Use asset hashes to use for caching
-  #activate :asset_hash
+  activate :asset_hash
 
 end
