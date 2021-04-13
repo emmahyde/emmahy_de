@@ -14,7 +14,9 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
-activate :livereload
+configure :development do
+  activate :livereload
+end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -84,4 +86,5 @@ configure :build do
   #Use asset hashes to use for caching
   activate :asset_hash
 
+  activate :relative_assets
 end
