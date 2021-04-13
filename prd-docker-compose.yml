@@ -1,8 +1,7 @@
 version: '3.8'
 services:
   web:
-    build:
-      context: .
+    image: emmajhyde/emmahy_de:latest
     ports:
       - 443:4567
     environment:
