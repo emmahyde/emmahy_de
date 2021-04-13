@@ -5,6 +5,8 @@ services:
       context: .
     ports:
       - 8080:4567
-      - 35729:35729
     environment:
       NODE_ENV: production
+    command: >
+      bash -c "cd /app
+      && bundle exec middleman server --port=8080 --environment=production --relative-links=true --watcher-disable --bind-address=0.0.0.0"
