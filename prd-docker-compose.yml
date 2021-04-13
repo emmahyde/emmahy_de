@@ -4,7 +4,7 @@ services:
     build:
       context: .
     ports:
-      - 8080:4567
+      - 443:4567
     environment:
       NODE_ENV: production
     command: >
